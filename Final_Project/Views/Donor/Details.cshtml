@@ -1,0 +1,64 @@
+﻿@model Final_Project.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Person</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonKey)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonKey)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonLastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonLastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonFirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonFirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonUsername)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonUsername)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonPlainPassword)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonPlainPassword)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Personpasskey)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Personpasskey)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonEntryDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonEntryDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,84 @@
+﻿@model Final_Project.Models.Person
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Person</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonKey)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonKey)
+            @Html.ValidationMessageFor(model => model.PersonKey)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonLastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonLastName)
+            @Html.ValidationMessageFor(model => model.PersonLastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonFirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonFirstName)
+            @Html.ValidationMessageFor(model => model.PersonFirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonUsername)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonUsername)
+            @Html.ValidationMessageFor(model => model.PersonUsername)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonPlainPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonPlainPassword)
+            @Html.ValidationMessageFor(model => model.PersonPlainPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Personpasskey)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Personpasskey)
+            @Html.ValidationMessageFor(model => model.Personpasskey)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonEntryDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonEntryDate)
+            @Html.ValidationMessageFor(model => model.PersonEntryDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

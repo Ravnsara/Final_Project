@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Final_Project.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonUsername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonPlainPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personpasskey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonEntryDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonUsername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonPlainPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personpasskey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonEntryDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
