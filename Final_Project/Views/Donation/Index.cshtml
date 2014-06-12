@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Final_Project.Models.Donation>
+
+@{
+    ViewBag.Title = "Donations";
+}
+
+<h2>Donations</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationConfirmDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationConfirmDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DonationKey }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DonationKey }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DonationKey })
+        </td>
+    </tr>
+}
+
+</table>

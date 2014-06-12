@@ -184,6 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\DonorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -192,7 +193,22 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Donation.cs">
-      <DependentUpon>DonorModel.tt</DependentUpon>
+      <DependentUpon>DonationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonationModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonationModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonationModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DonorModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -271,6 +287,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\DonationModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DonationModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DonationModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DonationModel.edmx</DependentUpon>
+      <LastGenOutput>DonationModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DonationModel.edmx.diagram">
+      <DependentUpon>DonationModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DonationModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DonationModel.edmx</DependentUpon>
+      <LastGenOutput>DonationModel.cs</LastGenOutput>
+    </Content>
     <EntityDeploy Include="Models\DonorModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DonorModel.Designer.cs</LastGenOutput>
@@ -347,6 +380,11 @@
     <Content Include="Views\Donor\Create.cshtml" />
     <Content Include="Views\Donor\Edit.cshtml" />
     <Content Include="Views\Donor\Delete.cshtml" />
+    <Content Include="Views\Donation\Index.cshtml" />
+    <Content Include="Views\Donation\Details.cshtml" />
+    <Content Include="Views\Donation\Create.cshtml" />
+    <Content Include="Views\Donation\Edit.cshtml" />
+    <Content Include="Views\Donation\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

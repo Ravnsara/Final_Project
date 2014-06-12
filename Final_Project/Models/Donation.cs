@@ -20,7 +20,5 @@ namespace Final_Project.Models
         public Nullable<int> PersonKey { get; set; }
         public Nullable<int> EmployeeKey { get; set; }
         public Nullable<System.DateTime> DonationConfirmDate { get; set; }
-    
-        public virtual Person Person { get; set; }
     }
 }

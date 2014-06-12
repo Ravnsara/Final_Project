@@ -13,10 +13,10 @@ namespace Final_Project.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CommunityAssistEntities : DbContext
+    public partial class CommunityAssistEntities1 : DbContext
     {
-        public CommunityAssistEntities()
-            : base("name=CommunityAssistEntities")
+        public CommunityAssistEntities1()
+            : base("name=CommunityAssistEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace Final_Project.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Person> People { get; set; }
+        public DbSet<Donation> Donations { get; set; }
     }
 }

@@ -14,11 +14,6 @@ namespace Final_Project.Models
     
     public partial class Person
     {
-        public Person()
-        {
-            this.Donations = new HashSet<Donation>();
-        }
-    
         public int PersonKey { get; set; }
         public string PersonLastName { get; set; }
         public string PersonFirstName { get; set; }
@@ -27,7 +22,5 @@ namespace Final_Project.Models
         public Nullable<int> Personpasskey { get; set; }
         public Nullable<System.DateTime> PersonEntryDate { get; set; }
         public byte[] PersonUserPassword { get; set; }
-    
-        public virtual ICollection<Donation> Donations { get; set; }
     }
 }
